@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>North Star Bakery | Contact</title>
+</head>
+<body>
+<header>
+<img src="images/bakery-logo_c.png" alt="North Star Bakery logo with a star over a loaf
+of bread">
+<h1>Contact and Pre-Orders</h1>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<h2>Location</h2>
+<p>142 Maple Street, downtown. Street parking is available in front of the shop.</p>
+<h2>Hours of Operation</h2>
+<p>Tuesday through Sunday, 6:00 a.m. to 4:00 p.m. Closed Monday.</p>
+<h2>Inquiry and Pre-Order Form</h2>
+<p>Use this form for a pre-order or a general question. We will email you back about
+pickup time.</p>
+<form action="#" method="post">
+<fieldset>
+<legend>Pre-Order or General Inquiry</legend>
+<p>
+<label for="fullname">Full Name</label><br>
+<input type="text" id="fullname" name="fullname" required pattern="[A-Za-z ]
+{2,}" title="Please enter your first and last name">
+</p>
+<p>
+<label for="email">Email</label><br>
+<input type="email" id="email" name="email" required>
+</p>
+<p>
+<label for="pickup">Pickup Date</label><br>
+<input type="date" id="pickup" name="pickup" required>
+</p>
+<p>
+<label for="requesttype">Request Type</label><br>
+<select id="requesttype" name="requesttype" required>
+<option value="">Choose one</option>
+<option value="preorder">Pre-order</option>
+<option value="question">General Question</option>
+</select>
+</p>
+<p>
+<label for="itemdetails">Item Details</label><br>
+<textarea id="itemdetails" name="itemdetails" rows="4" required
+placeholder="Tell us what you need, like 2 sourdough loaves"></textarea>
+</p>
+<p>
+<label for="allergies">Allergy Notes (if applicable)</label><br>
+<input type="text" id="allergies" name="allergies">
+</p>
+<p>
+<button type="submit">Submit Request</button>
+</p>
+</fieldset>
+</form>
+</main>
+<footer>
+<p>North Star Bakery | 142 Maple Street | Tuesday-Sunday 6 a.m. to 4 p.m.</p>
+</footer>
+</body>
+</html>

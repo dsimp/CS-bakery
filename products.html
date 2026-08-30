@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>North Star Bakery | Products</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -20,19 +21,27 @@
         </nav>
     </header>
     <main>
+        <section class="saved-box">
+            <h2>Items Saved for Pickup</h2>
+            <p id="saved-message">No items saved yet. Tap Save for pickup on an item you want later.</p>
+            <ul id="saved-list"></ul>
+        </section>
         <div class="product-list">
             <article class="product-card">
                 <h2>Breads</h2>
                 <p>Daily loaves include sourdough, honey oat, and rye. Price range is $6 to $10 per loaf.</p>
                 <img src="images/bakery-bread_c.png" alt="Fresh baked bakery bread cooling on a rack">
+                <button type="button" class="favorite-btn" data-product="bread">Save for pickup</button>
             </article>
             <article class="product-card">
                 <h2>Pastries</h2>
                 <p>Morning pastries include croissants, muffins, and cinnamon rolls. Most items are $3 to $5 each.</p>
+                <button type="button" class="favorite-btn" data-product="pastry">Save for pickup</button>
             </article>
             <article class="product-card">
                 <h2>Cakes</h2>
                 <p>We bake layer cakes and simple sheet cakes for birthdays and small events. Prices usually start around $28 depending on size.</p>
+                <button type="button" class="favorite-btn" data-product="cake">Save for pickup</button>
             </article>
         </div>
         <h2>Signature Loaf</h2>
@@ -40,6 +49,7 @@
             <img src="images/bakery-signature-loaf_c.png" alt="North Star Bakery signature sourdough loaf with a crisp scored crust">
             <figcaption>Our signature sourdough loaf, baked every morning and available for same-day pickup.</figcaption>
         </figure>
+        <button type="button" class="favorite-btn" data-product="signature">Save for pickup</button>
         <p>Need a larger order? Use the contact page to send a pre-order request. We do not take online checkout.</p>
     </main>
     <footer>

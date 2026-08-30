@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>North Star Bakery | Contact</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -26,16 +27,18 @@
         <p>Tuesday through Sunday, 6:00 a.m. to 4:00 p.m. Closed Monday.</p>
         <h2>Inquiry and Pre-Order Form</h2>
         <p>Use this form for a pre-order or a general question. We will email you back about pickup time.</p>
-        <form action="#" method="post">
+        <form id="contact-form" action="#" method="post" novalidate>
             <fieldset>
                 <legend>Pre-Order or General Inquiry</legend>
                 <p>
                     <label for="fullname">Full Name</label><br>
-                    <input type="text" id="fullname" name="fullname" required pattern="[A-Za-z ]{2,}" title="Please enter your first and last name">
+                    <input type="text" id="fullname" name="fullname">
+                    <span class="error" id="fullname-error"></span>
                 </p>
                 <p>
                     <label for="email">Email</label><br>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email">
+                    <span class="error" id="email-error"></span>
                 </p>
                 <p>
                     <label for="pickup">Pickup Date</label><br>
@@ -51,7 +54,8 @@
                 </p>
                 <p>
                     <label for="itemdetails">Item Details</label><br>
-                    <textarea id="itemdetails" name="itemdetails" rows="4" required placeholder="Tell us what you need, like 2 sourdough loaves"></textarea>
+                    <textarea id="itemdetails" name="itemdetails" rows="4" placeholder="Tell us what you need, like 2 sourdough loaves"></textarea>
+                    <span class="error" id="itemdetails-error"></span>
                 </p>
                 <p>
                     <label for="allergies">Allergy Notes (if applicable)</label><br>
@@ -60,6 +64,7 @@
                 <p>
                     <button type="submit">Submit Request</button>
                 </p>
+                <p id="form-success"></p>
             </fieldset>
         </form>
     </main>

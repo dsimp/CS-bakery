@@ -145,6 +145,29 @@ footer {
     margin-top: 2rem;
 }
 
+.error {
+    display: block;
+    color: #8B1E1E;
+    font-size: 0.9rem;
+    margin: 0.25rem 0 0.6rem 0;
+}
+
+.invalid {
+    border: 2px solid #8B1E1E;
+}
+
+.saved-box {
+    background-color: #ffffff;
+    border: 2px solid #D88C5A;
+    padding: 0.8rem 1rem;
+    margin: 1rem 0;
+}
+
+.favorite-btn {
+    margin-top: 0.6rem;
+    max-width: 220px;
+}
+
 /* larger screens */
 @media screen and (min-width: 768px) {
     header {

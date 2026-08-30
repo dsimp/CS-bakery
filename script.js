@@ -165,15 +165,27 @@ function saveFormDraft() {
 
 function loadFormDraft() {
     var stored = localStorage.getItem("nsbFormDraft");
-    if (!stored) {
-        return;
+    if (stored) {
+        var draft = JSON.parse(stored);
+        if (draft.fullname && document.getElementById("fullname")) {
+            document.getElementById("fullname").value = draft.fullname;
+        }
+        if (draft.email && document.getElementById("email")) {
+            document.getElementById("email").value = draft.email;
+        }
     }
-    var draft = JSON.parse(stored);
-    if (draft.fullname && document.getElementById("fullname")) {
-        document.getElementById("fullname").value = draft.fullname;
-    }
-    if (draft.email && document.getElementById("email")) {
-        document.getElementById("email").value = draft.email;
+
+    var details = document.getElementById("itemdetails");
+    if (details && details.value.trim() === "" && savedFavorites.length > 0) {
+        var names = [];
+        var i;
+        for (i = 0; i < savedFavorites.length; i++) {
+            var item = getProductById(savedFavorites[i]);
+            if (item) {
+                names.push(item.name);
+            }
+        }
+        details.value = "Please reserve: " + names.join(", ");
     }
 }
 
